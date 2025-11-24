@@ -1,0 +1,23 @@
+﻿@model IEnumerable<MeuSiteEmMVC.Models.User>
+
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Usuários";
+}
+
+<h2>Lista de Usuários</h2>
+<a asp-action="Create">Criar Novo Usuário</a>
+
+<table>
+    <tr>
+        <th>Nome</th>
+        <th>Email</th>
+    </tr>
+    @foreach (var user in Model)
+    {
+        <tr>
+            <td>@user.Name</td>
+            <td>@user.Email</td>
+        </tr>
+    }
+</table>

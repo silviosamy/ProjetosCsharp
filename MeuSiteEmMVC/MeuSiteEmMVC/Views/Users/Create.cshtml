@@ -1,0 +1,22 @@
+﻿@model MeuSiteEmMVC.Models.User
+
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Criar Usuário";
+}
+
+<h2>Criar Usuário</h2>
+
+<form asp-action="Create" method="post">
+    <div>
+        <label asp-for="Name"></label>
+        <input asp-for="Name" />
+    </div>
+    <div>
+        <label asp-for="Email"></label>
+        <input asp-for="Email" />
+    </div>
+    <button type="submit">Salvar</button>
+</form>
+
+<a asp-action="Index">Voltar para lista</a>
