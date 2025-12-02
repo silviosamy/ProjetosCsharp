@@ -13,6 +13,7 @@ namespace MeuSiteEmMVC.Controllers
             _context = context;
         }
 
+<<<<<<< HEAD
         // GET: /Users
         public IActionResult Index()
         {
@@ -29,6 +30,13 @@ namespace MeuSiteEmMVC.Controllers
         // POST: /Users/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
+=======
+        public IActionResult Index() => View(_context.Users.ToList());
+
+        public IActionResult Create() => View();
+
+        [HttpPost]
+>>>>>>> 3df0da39a5325290ed31a0ea8e582449fed8c637
         public IActionResult Create(User user)
         {
             if (ModelState.IsValid)

@@ -10,7 +10,10 @@ builder.Services.AddDbContext<Connection>(options =>
     ));
 
 builder.Services.AddControllersWithViews();
+<<<<<<< HEAD
 builder.WebHost.UseUrls("http://localhost:5000", "https://localhost:5001");
+=======
+>>>>>>> 3df0da39a5325290ed31a0ea8e582449fed8c637
 
 var app = builder.Build();
 

@@ -17,11 +17,16 @@ namespace MeuSiteEmMVC.Controllers
         {
             return View();
         }
+<<<<<<< HEAD
         public IActionResult User()
         {
             return View();
         }
         public IActionResult Products()
+=======
+
+        public IActionResult Privacy()
+>>>>>>> 3df0da39a5325290ed31a0ea8e582449fed8c637
         {
             return View();
         }
