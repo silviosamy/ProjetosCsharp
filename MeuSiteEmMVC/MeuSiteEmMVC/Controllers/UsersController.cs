@@ -13,39 +13,67 @@ namespace MeuSiteEmMVC.Controllers
             _context = context;
         }
 
-<<<<<<< HEAD
-        // GET: /Users
         public IActionResult Index()
         {
             var users = _context.Users.ToList();
-            return View(users); // procura Views/Users/Index.cshtml
+            return View(users);
         }
 
-        // GET: /Users/Create
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: /Users/Create
         [HttpPost]
-        [ValidateAntiForgeryToken]
-=======
-        public IActionResult Index() => View(_context.Users.ToList());
-
-        public IActionResult Create() => View();
-
-        [HttpPost]
->>>>>>> 3df0da39a5325290ed31a0ea8e582449fed8c637
         public IActionResult Create(User user)
         {
             if (ModelState.IsValid)
             {
                 _context.Users.Add(user);
                 _context.SaveChanges();
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction("Index");
             }
             return View(user);
+        }
+
+        public IActionResult Edit(int id)
+        {
+            var user = _context.Users.Find(id);
+            if (user == null) return NotFound();
+            return View(user);
+        }
+        [HttpPost]
+        public IActionResult Edit(User user)
+        {
+            if (ModelState.IsValid)
+            {
+                _context.Users.Update(user);
+                _context.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            return View(user);
+        }
+        public IActionResult Details(int id)
+        {
+            var user = _context.Users.Find(id);
+            if (user == null) return NotFound();
+            return View(user);
+        }
+
+        public IActionResult Delete(int id)
+        {
+            var user = _context.Users.Find(id);
+            if (user == null) return NotFound();
+            return View(user);
+        }
+        [HttpPost, ActionName("Delete")]
+        public IActionResult DeleteConfirmed(int id)
+        {
+            var user = _context.Users.Find(id);
+            if (user == null) return NotFound();
+            _context.Users.Remove(user);
+            _context.SaveChanges();
+            return RedirectToAction("Index");
         }
     }
 }

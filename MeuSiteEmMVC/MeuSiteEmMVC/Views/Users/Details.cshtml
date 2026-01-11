@@ -1,6 +1,15 @@
-﻿namespace MeuSiteEmMVC.Views.Users
-{
-    public class Details
-    {
-    }
+﻿@model MeuSiteEmMVC.Models.User
+
+@{
+    ViewData["Title"] = "Detalhes do Usuário";
 }
+
+<div class="container mt-5 text-light">
+    <h2 class="mb-4">📁 Detalhes do Usuário</h2>
+
+    <p><strong>Nome:</strong> @Model.Name</p>
+    <p><strong>Email:</strong> @Model.Email</p>
+
+    <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-warning me-2">✏️ Editar</a>
+    <a asp-action="Index" class="btn btn-secondary">⬅️ Voltar</a>
+</div>

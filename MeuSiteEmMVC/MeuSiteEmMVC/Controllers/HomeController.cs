@@ -22,7 +22,7 @@ namespace MeuSiteEmMVC.Controllers
         {
             return View();
         }
-        public IActionResult Products()
+        public IActionResult Product()
         {
             return View();
         }

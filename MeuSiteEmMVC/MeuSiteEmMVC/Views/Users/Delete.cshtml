@@ -1,6 +1,22 @@
-﻿namespace MeuSiteEmMVC.Views.Users
-{
-    public class Delete
-    {
-    }
+﻿@model MeuSiteEmMVC.Models.User
+
+@{
+    ViewData["Title"] = "Excluir Usuário";
 }
+
+<div class="container mt-5 text-light">
+    <h2 class="mb-4 text-danger">🗑 Excluir Usuário</h2>
+
+    <div class="alert alert-danger">
+        Tem certeza que deseja excluir este usuário?
+    </div>
+
+    <p><strong>Nome:</strong> @Model.Name</p>
+    <p><strong>Email:</strong> @Model.Email</p>
+
+    <form asp-action="Delete" method="post">
+        <input type="hidden" asp-for="Id" />
+        <button type="submit" class="btn btn-danger">🗑 Confirmar Exclusão</button>
+        <a asp-action="Index" class="btn btn-secondary ms-2">⬅️ Cancelar</a>
+    </form>
+</div>

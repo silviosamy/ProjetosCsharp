@@ -1,6 +1,18 @@
-﻿namespace MeuSiteEmMVC.Views.Users
-{
-    public class Edit
-    {
-    }
+﻿@model MeuSiteEmMVC.Models.User
+
+@{
+    ViewData["Title"] = "Editar Usuário";
 }
+
+<div class="container mt-5 text-light">
+    <h2 class="mb-4">✏️ Editar Usuário</h2>
+
+    <form asp-action="Edit" method="post">
+        <input type="hidden" asp-for="Id" />
+        <div class="mb-3">
+            <label asp-for="Name" class="form-label">Nome</label>
+            <input asp-for="Name" class="form-control bg-dark text-light border-secondary" />
+        </div>
+        <div class="mb-3">
+            <label asp-for="Email" class="form-label">Email</label>
+            <input asp-for="Email" class="form-control bg-dark text-light border-secondary" />

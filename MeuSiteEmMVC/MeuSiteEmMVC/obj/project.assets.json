@@ -2833,11 +2833,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\silvi\\Source\\Repos\\ProjetosCsharp\\MeuSiteEmMVC\\MeuSiteEmMVC\\MeuSiteEmMVC.csproj",
+      "projectUniqueName": "C:\\Users\\silvi\\source\\repos\\ProjetosCsharp\\MeuSiteEmMVC\\MeuSiteEmMVC\\MeuSiteEmMVC.csproj",
       "projectName": "MeuSiteEmMVC",
-      "projectPath": "C:\\Users\\silvi\\Source\\Repos\\ProjetosCsharp\\MeuSiteEmMVC\\MeuSiteEmMVC\\MeuSiteEmMVC.csproj",
+      "projectPath": "C:\\Users\\silvi\\source\\repos\\ProjetosCsharp\\MeuSiteEmMVC\\MeuSiteEmMVC\\MeuSiteEmMVC.csproj",
       "packagesPath": "C:\\Users\\silvi\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\silvi\\Source\\Repos\\ProjetosCsharp\\MeuSiteEmMVC\\MeuSiteEmMVC\\obj\\",
+      "outputPath": "C:\\Users\\silvi\\source\\repos\\ProjetosCsharp\\MeuSiteEmMVC\\MeuSiteEmMVC\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -2920,13 +2920,5 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.100/PortableRuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problema ao ler o arquivo de cache C:\\Users\\silvi\\Source\\Repos\\ProjetosCsharp\\MeuSiteEmMVC\\MeuSiteEmMVC\\obj\\project.nuget.cache: '<' is an invalid start of a property name. Expected a '\"'. Path: $ | LineNumber: 2 | BytePositionInLine: 0."
-    }
-  ]
+  }
 }
